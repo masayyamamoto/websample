@@ -1,0 +1,185 @@
+@charset "utf-8";
+
+/* 共通部分 */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing:border-box;
+}
+a {
+  text-decoration: none;
+  color:inherit;
+  margin-left: 20px;
+}
+a:hover{
+  opacity: 0.5;
+}
+img {
+  margin: 0;
+  padding: 0;
+}
+.container {
+  max-width:800px;
+  width:calc(100% - 32px);
+  margin: 0 auto;
+  text-align: center;
+}
+
+/* ヘッダー部分 */
+header .logo img {
+  width:auto;
+  height:80px;
+  margin:-20px 10px 0 0;
+  padding:0;
+}
+.logo {
+  display:flex;
+  justify-content:center;
+}
+.header_section {
+  display: flex;
+  justify-content: space-between;
+  height: 80px;
+  padding: 20px;
+  vertical-align: center;
+}
+.topmessage{
+  position: relative;
+}
+.topmessage p {
+  position: absolute;
+  font-size:18px;
+  font-weight: normal;
+  color: white;
+  top:80%;
+  left:50%;
+  transform: translate(-50%,-50%);
+  margin:0;
+  padding:0;
+}
+.topimage {
+  width: 100%;
+}
+/* ↑ヘッダー部分 */
+/* メイン部分 */
+
+main {
+  margin-top: 60px;
+}
+main .container section{
+  display: flex; 
+  margin-top: 60px;
+  text-align: left;
+}
+section img {
+  width: 40%;
+}
+.sokuryo {
+  flex-direction:row-reverse;
+}
+.sokuryo img {
+  margin-left: 24px;
+}
+.bummei img {
+  margin-right: 24px;
+}
+h2 {
+  font-weight: normal;
+  font-size: 20px;
+}
+p {
+  font-size: 14px;
+  margin-top: 8px;
+}
+
+/* ↑メイン部分 */
+/* アクセス部分 */
+
+#access {
+  padding-top: 60px;
+  border-top:1px solid #eee;
+}
+.map {
+  margin-right: 20px;
+}
+/* ↑アクセス部分 */
+/* フッター部分 */
+footer small {
+  display: block;
+  font-size: 12px;
+  text-align: center;
+  margin-top: 24px;
+}
+footer {
+  margin-top: 100px;
+  padding: 30px 0;
+  background-color: #eee;
+  /* outline: 1px solid red; */
+}
+.meisi {
+  height: 60px;
+}
+footer .container {
+  display: flex;
+  justify-content:center;
+  align-items:center;
+}
+
+@media screen and (max-width:768px),print {
+  
+  .header_section {
+    display: block;
+    height: auto;
+    padding: 20px;
+  }
+  nav {
+    margin-top:30px;
+  }
+  .topmessage p {
+    font-size:14px;
+  }
+
+  main .container section{
+    display: block; 
+    margin-top: 10px;
+  }
+  main .container section + section{
+    margin-top:60px;
+  }
+  
+  section img {
+    width: 80%;
+    margin:0 auto;
+  }
+
+  .sokuryo img {
+    margin-left: 0;
+  }
+  .bummei img {
+    margin-right: 0;
+  }
+
+
+  #access .map{
+    margin-top: 0px;
+    padding-top: 0;
+    text-align: center;
+  }
+  .call {
+    display:flex;
+    flex-direction: column;
+    text-align:center;
+    margin-top: 30px;
+  }
+
+  footer {
+    margin-top: 30px;
+    padding: 20px 0;
+  }
+  footer .container {
+    display: block;
+    align-items:center;
+  }
+
+
+}
